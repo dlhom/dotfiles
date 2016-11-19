@@ -1,0 +1,34 @@
+alias ..='cd .. && pwd'
+alias rm='rm -i'
+alias ll='ls -l'
+alias vi='vim'
+alias gows='cd ~/workspace && pwd'
+alias gobk='cd ~/Books && pwd'
+alias godesk='cd ~/Desktop && pwd'
+alias reload='source ~/.bash_profile'
+
+function title(){
+  if [ $# -lt 1 ]; then
+    echo "usage: title <title_name>"
+  else
+    echo -ne "\033]0;$@\007"
+  fi
+}
+
+function shellshock(){
+  env z="() { :; }; echo vulnerable" bash -c "echo foo"
+}
+
+# remove all node_modules recursively
+# find . -name "node_modules" -exec rm -rf '{}' +
+
+### os x stuff
+# xattr <file>
+# xattr -d com.apple.metadata:kMDItemWhereFroms <files> # remove from metadata
+# xattr -d com.apple.FinderInfo <file> # fix grayed out file
+
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.gamed.plist
+# defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+function rmds_store(){
+  find . -name ‘*.DS_Store’ -type f -delete
+}
