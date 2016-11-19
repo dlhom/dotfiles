@@ -1,0 +1,23 @@
+[color]
+	ui = auto
+[core]
+  autocrlf = input
+  safecrlf = true
+	editor = /usr/bin/vim
+[user]
+  name = David Hom
+	email = username@users.noreply.github.com
+[alias]
+  hist = !git --no-pager log --pretty=tformat:'%h %ad | %s%d [%an]' --date=short
+  lg = log --graph --pretty=format:'%Cred%h%Creset |%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  pom = push origin master
+  pum = pull upstream master
+  pumr = pull --rebase upstream master
+	po = push origin
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+	pu = push
