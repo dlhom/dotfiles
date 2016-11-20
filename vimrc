@@ -14,6 +14,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'tpope/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -29,6 +30,9 @@ set ttyfast
 
 " Set the boolean number option to true set number set number
 set number
+
+set t_Co=256
+syntax on
 
 " Highlight current line
 set cursorline
