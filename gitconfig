@@ -6,7 +6,7 @@
 	editor = /usr/bin/vim
 [user]
   name = David Hom
-	email = username@users.noreply.github.com
+	email = dlhom@users.noreply.github.com
 [alias]
   hist = !git --no-pager log --pretty=tformat:'%h %ad | %s%d [%an]' --date=short
   lg = log --graph --pretty=format:'%Cred%h%Creset |%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
