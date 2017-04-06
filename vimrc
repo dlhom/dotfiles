@@ -23,7 +23,6 @@ filetype plugin indent on    " required
 " always show that status line
 set laststatus=2
 
-" let g:airline_powerline_fonts = 1
 
 " faster redrawing
 set ttyfast
@@ -33,6 +32,7 @@ set number
 
 set t_Co=256
 syntax on
+colorscheme molokai
 
 " Highlight current line
 set cursorline
@@ -40,9 +40,13 @@ set cursorline
 " Set the tab options
 set smarttab
 set autoindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
+
+" hightlight matching braces
+set showmatch
 
 " fix copy paste in vim for tmux
 set clipboard=unnamed
@@ -72,3 +76,23 @@ noremap <leader>t :NERDTree<CR>
 " inoremap <Right>    <NOP>
 " inoremap <Up>       <NOP>
 " inoremap <Down>     <NOP>
+
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'

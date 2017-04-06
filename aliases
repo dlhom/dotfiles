@@ -30,5 +30,6 @@ function shellshock(){
 # launchctl unload -w /System/Library/LaunchAgents/com.apple.gamed.plist
 # defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 function rmds_store(){
-  find . -name ‘*.DS_Store’ -type f -delete
+  find . -name ".DS_Store" -exec rm -rf '{}' +
+  # find . -name ‘*.DS_Store’ -type f -delete
 }
